@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Usted ha seleccionado:</h1> <br>
+    <div class="container" style="text-align: center;">
+    
+    </div>
+
+    <script>
+        var parameters = location.search.substring(1).split("&");
+
+        
+        let html="";
+
+        parameters.forEach(element => {
+            html+=`
+            <img src="/Encuesta/img/${element.substring(0,element.length-1)}.png" alt="" style="width:100px;height:100px;">
+            `;
+        });
+
+      document.getElementsByClassName('container')[0].innerHTML=html;
+
+    </script>
+</body>
+</html>
