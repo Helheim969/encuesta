@@ -3,7 +3,7 @@ $html="";
 $VAR1="<img src='/Encuesta/img/";
 $VAR2=".png' alt='' style='width:100px;height:100px;'>";
 
-foreach($_POST as $item=>$item2){
+foreach($_GET as $item=>$item2){
 
     $html.="{$VAR1}{$item}{$VAR2}";
 }
